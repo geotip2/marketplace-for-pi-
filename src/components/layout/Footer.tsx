@@ -123,11 +123,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <CreditCard className="w-4 h-4" />
-                <span>Pi Coin Powered</span>
+                <span>powered by marketplaceforpispan>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2024 PiMarket. All rights reserved.
+              © 2025 Marketplaceforpi. All rights reserved.
             </p>
           </div>
         </div>
