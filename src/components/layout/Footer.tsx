@@ -6,8 +6,7 @@ const Footer = () => {
     <footer className="bg-muted/50 border-t border-border mt-auto">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div className="space-y-4">
+                  <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center">
                 <Users className="w-4 h-4 text-primary-foreground" />
