@@ -81,7 +81,7 @@ const HomePage = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-4">
                 <Badge variant="secondary" className="w-fit">
-                  Powered by Pi Network
+                  Powered by Marketplace for pi
                 </Badge>
                 <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
                   The Future of
