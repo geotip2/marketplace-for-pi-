@@ -15,13 +15,13 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">PiMarket</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              The first decentralized marketplace powered by Pioneer to pioneers .Buy, sell, and trade with the Pi community.
+              The first decentralized marketplace powered by Pioneer to pioneers. Buy, sell, and trade with the Pi community.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" classNatext-muted-foregroundound hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -122,7 +122,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <CreditCard className="w-4 h-4" />
-                <span>powered by marketplaceforpispan>
+                <span>Powered by Marketplaceforpi</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
