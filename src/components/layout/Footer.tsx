@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Twitter, Mail, Shield, CreditCard, Users } from 'lucide-react';
+import { Github, Twitter, Mail, Shield, CreditCard, Users, Store, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -15,16 +15,16 @@ const Footer = () => {
               <span className="text-xl font-bold text-foreground">Marketplace for Pioneers</span>
             </div>
             <p className="text-muted-foreground text-sm">
-              The first decentralized marketplace powered by Pioneer to pioneers. Buy, sell, and trade with the Pi community.
+              The first decentralized marketplace powered by pioneers, for pioneers. Buy, sell, and trade with the Pi community.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Twitter">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="GitHub">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Email">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -35,24 +35,24 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Marketplace</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/search" className="text-muted-foreground hover:text-primary transition-colors">
-                  Browse Products
+                <Link to="/products" className="text-muted-foreground hover:text-primary transition-colors">
+                  All Products
                 </Link>
               </li>
               <li>
-                <Link to="/create-store" className="text-muted-foreground hover:text-primary transition-colors">
-                  Create Store
-                </Link>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/categories" className="text-muted-foreground hover:text-primary transition-colors">
                   Categories
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Featured Stores
-                </a>
+                <Link to="/featured" className="text-muted-foreground hover:text-primary transition-colors">
+                  Featured Items
+                </Link>
+              </li>
+              <li>
+                <Link to="/sell" className="text-muted-foreground hover:text-primary transition-colors">
+                  Sell Products
+                </Link>
               </li>
             </ul>
           </div>
@@ -62,51 +62,51 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/help" className="text-muted-foreground hover:text-primary transition-colors">
                   Help Center
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/seller-guide" className="text-muted-foreground hover:text-primary transition-colors">
                   Seller Guide
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pi Coin Guide
-                </a>
+                <Link to="/buyer-guide" className="text-muted-foreground hover:text-primary transition-colors">
+                  Buyer Guide
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Contact Us
-                </a>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact Support
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Community */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Legal</h3>
+            <h3 className="font-semibold text-foreground">Community</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Privacy Policy
-                </a>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
+                  About Us
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Terms of Service
-                </a>
+                <Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">
+                  Blog
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Commission Policy
-                </a>
+                <Link to="/events" className="text-muted-foreground hover:text-primary transition-colors">
+                  Events
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Refund Policy
-                </a>
+                <Link to="/partners" className="text-muted-foreground hover:text-primary transition-colors">
+                  Partners
+                </Link>
               </li>
             </ul>
           </div>
@@ -121,9 +121,14 @@ const Footer = () => {
                 <span>Secure Payments</span>
               </div>
               <div className="flex items-center space-x-1">
-                <CreditCard className="w-4 h-4" />
-                <span>Powered by Marketplace for Pioneers</span>
+                <Store className="w-4 h-4" />
+                <span>Decentralized Marketplace</span>
               </div>
+            </div>
+            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 text-red-500" />
+              <span>for the Pi Community</span>
             </div>
             <p className="text-sm text-muted-foreground">
               © 2025 Marketplace for Pioneers. All rights reserved.
