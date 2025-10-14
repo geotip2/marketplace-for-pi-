@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Github, Twitter, Mail, Shield, CreditCard } from 'lucide-react';
+import { Github, Twitter, Mail, Shield, CreditCard, Users } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full gradient-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">π</span>
+                <Users className="w-4 h-4 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold text-foreground">PiMarket</span>
+              <span className="text-xl font-bold text-foreground">Marketplace for Pioneers</span>
             </div>
             <p className="text-muted-foreground text-sm">
               The first decentralized marketplace powered by Pioneer to pioneers. Buy, sell, and trade with the Pi community.
@@ -122,11 +122,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-1">
                 <CreditCard className="w-4 h-4" />
-                <span>Powered by Marketplaceforpi</span>
+                <span>Powered by Marketplace for Pioneers</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              © 2025 Marketplaceforpi. All rights reserved.
+              © 2025 Marketplace for Pioneers. All rights reserved.
             </p>
           </div>
         </div>
