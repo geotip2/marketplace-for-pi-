@@ -1,1 +1,19 @@
-2a4bbe742a588d2597defc1f12eb7e2ae0312b9cb13ea94267fd6322d79d7de22e4f94bbab00833b98b0790aa37b712b11cec4a07d1949e6df556653ccff80d2
+
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+
+const StorePage = () => {
+  return (
+    <div className="container mx-auto px-4 py-8">
+      <Card>
+        <CardContent className="p-8 text-center">
+          <h1 className="text-2xl font-bold mb-4">validation-key.txt</h1>
+          <p className="text-muted-foreground mb-4">2a4bbe742a588d2597defc1f12eb7e2ae0312b9cb13ea94267fd6322d79d7de22e4f94bbab00833b98b0790aa37b712b11cec4a07d1949e6df556653ccff80d2 </p>
+          <Button>Browse Products</Button>
+        </CardContent>
+      </Card>
+    </div>
+  );
+};
+
+export default StorePage;
