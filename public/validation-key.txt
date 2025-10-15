@@ -1,17 +1,19 @@
-const StorePage = () => {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="bg-white shadow rounded-lg p-8 text-center">
-        <h1 className="text-2xl font-bold mb-4">Validation Key</h1>
-        <p className="text-gray-500 mb-4 break-all font-mono text-sm bg-gray-100 p-4 rounded">
-          2a4bbe742a588d2597defc1f12eb7e2ae0312b9cb13ea94267fd6322d79d7de22e4f94bbab00833b98b0790aa37b712b11cec4a07d1949e6df556653ccff80d2
-        </p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Browse Products
-        </button>
-      </div>
-    </div>
-  );
-};
+// app/validation-key/page.tsx
+export default function ValidationKeyPage() {
+  const validationKey = '2a4bbe742a588d2597defc1f12eb7e2ae0312b9cb13ea94267fd6322d79d7de22e4f94bbab00833b98b0790aa37b712b11cec4a07d1949e6df556653ccff80d2';
+  
+  // This will render as plain text
+  return validationKey;
+}
 
-export default StorePage;
+// Force plain text response
+export function generateMetadata() {
+  return {
+    title: 'Validation Key',
+  };
+}
+
+// Optional: Set content type headers
+export async function generateStaticParams() {
+  return [];
+}
