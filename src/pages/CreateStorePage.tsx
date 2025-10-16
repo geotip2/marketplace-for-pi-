@@ -1,17 +1,40 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input'; // If you have input component
-import { Label } from '@/components/ui/label'; // If you have label component
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react'; // Added useState import
 
 const CreateStorePage = () => {
   const navigate = useNavigate();
+  // Added state to manage form data
+  const [formData, setFormData] = useState({
+    storeName: '',
+    storeDescription: ''
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle store creation logic
-    console.log('Store creation submitted');
+    console.log('Store creation submitted', formData);
+    
+    // Add your store creation API call or logic here
+    // For example:
+    // createStore(formData).then(() => {
+    //   navigate('/dashboard');
+    // });
+    
     navigate('/dashboard'); // Redirect after creation
+  };
+
+  // Added input change handler
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [id]: value
+    }));
   };
 
   return (
@@ -30,6 +53,8 @@ const CreateStorePage = () => {
                 id="storeName" 
                 placeholder="Enter your store name" 
                 required 
+                value={formData.storeName}
+                onChange={handleInputChange}
               />
             </div>
             
@@ -38,6 +63,8 @@ const CreateStorePage = () => {
               <Input 
                 id="storeDescription" 
                 placeholder="Describe your store" 
+                value={formData.storeDescription}
+                onChange={handleInputChange}
               />
             </div>
             
