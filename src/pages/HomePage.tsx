@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { ArrowRight, Store, ShoppingBag, Users, TrendingUp, Star, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ const HomePage = () => {
     {
       id: '1',
       name: 'Wireless Headphones',
-      price: 25.99,
+      price: 0.000079, // π 0.000079 = ~$24.82
       image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop',
       store: 'TechHub',
       rating: 4.8,
@@ -19,7 +18,7 @@ const HomePage = () => {
     {
       id: '2',
       name: 'Organic Coffee Beans',
-      price: 12.50,
+      price: 0.000045, // π 0.000045 = ~$14.14
       image: 'https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop',
       store: 'Bean & Brew',
       rating: 4.9,
@@ -28,7 +27,7 @@ const HomePage = () => {
     {
       id: '3',
       name: 'Handmade Ceramic Mug',
-      price: 18.00,
+      price: 0.000069, // π 0.000069 = ~$21.68
       image: 'https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?w=400&h=300&fit=crop',
       store: 'Artisan Corner',
       rating: 4.7,
@@ -37,7 +36,7 @@ const HomePage = () => {
     {
       id: '4',
       name: 'Fitness Tracker',
-      price: 45.99,
+      price: 0.000067, // π 0.000067 = ~$21.05
       image: 'https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=300&fit=crop',
       store: 'FitGear Pro',
       rating: 4.6,
@@ -71,6 +70,11 @@ const HomePage = () => {
       rating: 4.7
     }
   ];
+
+  // Helper function to calculate USD equivalent
+  const calculateUSD = (piAmount) => {
+    return (piAmount * 314159).toFixed(2);
+  };
 
   return (
     <div className="min-h-screen">
@@ -224,7 +228,12 @@ const HomePage = () => {
                     </h3>
                     <p className="text-sm text-muted-foreground">{product.store}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-lg font-bold text-primary">π {product.price}</span>
+                      <div>
+                        <span className="text-lg font-bold text-primary">π {product.price}</span>
+                        <span className="text-sm text-muted-foreground ml-2">
+                          (${calculateUSD(product.price)})
+                        </span>
+                      </div>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                         <span className="text-sm text-muted-foreground">{product.rating}</span>
